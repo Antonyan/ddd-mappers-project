@@ -1,0 +1,13 @@
+class_name: ApiTester
+modules:
+    enabled:
+    - REST:
+        depends: PhpBrowser
+        url: http://ddd.artem/
+    - PhpBrowser:
+        url: http://ddd.artem/
+        headers:
+          ph-token: test
+    - Db
+    - \Helper\RandomGeneratorHelper
+

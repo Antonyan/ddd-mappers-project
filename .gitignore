@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/vendor/
+/cache/
+
+/tests/api.suite.yml
+/tests/functional.suite.yml
+/tests/unit.suite.yml
+/tests/_log/*
+/tests/_temp/*
+/codeception.yml
+/tests/_output/
+!/src/infrastructure/Models/Config.php
+/.env
+

@@ -1,0 +1,33 @@
+{
+    "name": "antonyan/ddd-mappers-project",
+    "description": "DDD project skeleton",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artem Antonenko",
+            "email": "antonenko.artem@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "antonyan/ddd-mappers-infrastructure": "1.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/app/",
+            "Infrastructure\\": "src/infrastructure/",
+            "Contexts\\": "src/contexts/",
+            "Migrations\\": "database/migrations/"
+        },
+        "psr-0": {
+            "Infrastructure\\Annotations\\": "src/infrastructure/Annotations"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "2.*",
+        "phpunit/phpunit": "6.*"
+    },
+    "minimum-stability": "stable"
+}
