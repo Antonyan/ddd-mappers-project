@@ -11,7 +11,8 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "antonyan/ddd-mappers-infrastructure": "1.*"
+        "antonyan/ddd-mappers-infrastructure": "1.*",
+        "zircote/swagger-php": "^3.0"
     },
 
     "autoload": {
@@ -27,7 +28,8 @@
     },
     "require-dev": {
         "codeception/codeception": "2.*",
-        "phpunit/phpunit": "6.*"
+        "phpunit/phpunit": "6.*",
+        "ddd-project/generator": "1.*"
     },
     "minimum-stability": "stable"
 }
