@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "antonyan/ddd-mappers-infrastructure": "1.*",
+        "antonyan/ddd-mappers-infrastructure": "2.*",
         "zircote/swagger-php": "^3.0"
     },
 

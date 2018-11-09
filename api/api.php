@@ -13,7 +13,8 @@ AnnotationRegistry::registerLoader(function($class) use ($loader) {
 });
 
 $routes = include __DIR__ . '/../src/app/config/restRoutes.php';
+$appContainer = include __DIR__ . '/../src/app/config/appContainer.php';
 
 $request = (new \Infrastructure\Models\RichRequest())->createFromGlobals();
 
-(new Application($routes))->handle($request)->send();
+(new Application($routes,$appContainer))->handle($request)->send();
