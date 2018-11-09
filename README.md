@@ -22,3 +22,11 @@ $routesCollectionBuilder->addGET('you/url', 'YouService', 'youMethod');
 return $routesCollectionBuilder->build();
 
 ````
+
+#App Container
+In src/app/config in appContainer attach your own listeners to events and override specific reserved services <br/>
+Ex. customize error handling which triggered by exception listener.
+```$containerBuilder->register('application.error.handler', \App\Services\Error::class);```
+To attach subscriber or listener:<br/>
+```$containerBuilder->register('test_subscriber', TestSubscriber::class)->addTag('kernel.event_subscriber');```
+```$containerBuilder->register('test_subscriber', TestSubscriber::class)->addTag('kernel.event_listener',["event" => "<event_to_listen>", "method" => "<your_method>"]);```
