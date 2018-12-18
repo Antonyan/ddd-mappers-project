@@ -1,7 +1,9 @@
 <?php
 
+use App\Services\ApiDocumentation;
 use Infrastructure\Models\Routing\RouteCollectionBuilder;
-
+use OpenApi\Annotations\Info;
+use OpenApi\Annotations\Server;
 
 define('HOST', getenv('HOST'));
 
