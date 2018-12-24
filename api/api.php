@@ -1,4 +1,7 @@
 <?php
+define('PROJECT_PATH', __DIR__ . '/../');
+define('LOG_PATH', __DIR__ . '/../log/');
+
 /** @var \Composer\Autoload\ClassLoader $loader  */
 $loader = require __DIR__.'/../vendor/autoload.php';
 
