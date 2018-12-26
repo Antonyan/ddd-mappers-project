@@ -234,13 +234,26 @@ There you can see mapper for Model. Was created for typization only.
 It's stateless classes for business logic implementation. In case of simple data-centric application can seems like 
 proxy from Mapper to ContextService.
 
-## App Container
+## Infrastructure Container
 
-In src/app/config in appContainer attach your own listeners to events and override specific reserved services <br/>
+In ```src/app/config/appContainer.php``` you can attach own listeners or subscribers to events and override specific reserved services. 
 
-Ex. customize error handling which triggered by exception listener.<br/>
+### Customize error handling
+
+To customize error handling, which triggered by exception listener, you can override ```application.error.handler``` service which is reserved.<br/>
 ```$containerBuilder->register('application.error.handler', \App\Services\Error::class);```
 
+### Infrastructure events
+
+```request``` - thrown before executing request. As const name ```Infrastructure\Application::EVENT_BEFORE_DISPATCH_REQUEST```
+
+#### Symfony kernel events
+
+KernelEvents::EXCEPTION<br>
+...
+
+### Event listeners and subscribers
+
 To attach subscriber or listener:<br/>
-```$containerBuilder->register('test_subscriber', TestSubscriber::class)->addTag('kernel.event_subscriber');``` <br/>
+```$containerBuilder->register('test_subscriber', TestSubscriber::class)->addTag('kernel.event_subscriber');``` <br/><br/>
 ```$containerBuilder->register('test_subscriber', TestSubscriber::class)->addTag('kernel.event_listener',["event" => "<event_to_listen>", "method" => "<your_method>"]);```
