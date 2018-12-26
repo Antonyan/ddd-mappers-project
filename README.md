@@ -13,7 +13,7 @@ Besides, we've created a lot of different useful features that can significantly
 ## Quick start
 
 All that you need is to run a command ```composer create-project antonyan/ddd-mappers-project nameOfYourProject```
-[Setup DB] (https://github.com/Antonyan/ddd-mappers-infrastructure) See Db interaction -> connection
+[Setup DB](https://github.com/Antonyan/ddd-mappers-infrastructure) See Db interaction -> connection
 
 ## Request
 
