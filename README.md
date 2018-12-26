@@ -10,6 +10,11 @@ Our team doesn't want to emphasize technical things that's why we're using well-
 
 Besides, we've created a lot of different useful features that can significantly accelerate the development.
 
+## Quick start
+
+All that you need is to run a command ```composer create-project antonyan/ddd-mappers-project nameOfYourProject```
+[Setup DB] (https://github.com/Antonyan/ddd-mappers-infrastructure) See Db interaction -> connection
+
 ## Request
 
 To validate request data we created annotations that you can specify in presentation service (controller). 
