@@ -257,3 +257,7 @@ KernelEvents::EXCEPTION<br>
 To attach subscriber or listener:<br/>
 ```$containerBuilder->register('test_subscriber', TestSubscriber::class)->addTag('kernel.event_subscriber');``` <br/><br/>
 ```$containerBuilder->register('test_subscriber', TestSubscriber::class)->addTag('kernel.event_listener',["event" => "<event_to_listen>", "method" => "<your_method>"]);```
+
+### Application registry
+```Infrastructure\Models\ApplicationRegistry```<br/>
+Application registry is a global container and developed as singleton and registry pattern. Can be accessed from services which extends BaseService. 
