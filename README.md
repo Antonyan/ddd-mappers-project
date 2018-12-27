@@ -45,10 +45,8 @@ In this case, our validator checks all specified fields and remove any additiona
 Available validation types:
 
 ```
-'array', 'bool', 'callable', 'float', 'double', 'int', 'integer', 'iterable', 'long', 'null', 'numeric', 
-'object', 'real', 'resource', 'scalar', 'string'
+'array', 'bool', 'float', 'double', 'int', 'integer', 'numeric', 'string'
 ```
-
 
 ## Routing
 
@@ -233,6 +231,20 @@ There you can see mapper for Model. Was created for typization only.
 
 It's stateless classes for business logic implementation. In case of simple data-centric application can seems like 
 proxy from Mapper to ContextService.
+
+## Main idea
+
+Beside fast domain design implementation, this project has an idea of strict dependencies separation. Each service has 
+its own container which placed in the config folder in the same Module if it's module service or in the context 
+if it's context service.
+
+On top of that, to have access to the infrastructure classes (HttpClient, MySqlClient) BaseService automatically merge 
+it into the each service's container.
+
+##### Our recommended approach is to follow the next rules:
+* presentation service can use context service only;
+* context service can use module services from own context or other context services;
+* module service can use mappers, factories and models from own module only.
 
 ## Infrastructure Container
 
